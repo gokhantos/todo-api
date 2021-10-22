@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"todo-api/handler"
+	"todo-api/controller"
 	"todo-api/repository"
 	"todo-api/service"
 
@@ -40,25 +40,25 @@ func server(mode string) {
 	if mode == "test" {
 		todoRepository := repository.NewTodoRepository(SetupMongoDB(mode))
 		todoService := service.NewTodoService(todoRepository)
-		todoHandler := handler.NewTodoHandler(todoService)
+		TodoController := controller.NewTodoController(todoService)
 		e := echo.New()
 		e.Use(middleware.CORS())
-		e.GET("/api/todos", todoHandler.HandleGetTasks)
-		e.POST("/api/todos", todoHandler.HandleCreateTask)
-		e.PUT("/api/todos/:id", todoHandler.HandleUpdateTask)
-		e.DELETE("/api/todos/:id", todoHandler.HandleDeleteTask)
+		e.GET("/api/todos", TodoController.ControlGetTasks)
+		e.POST("/api/todos", TodoController.ControlCreateTask)
+		e.PUT("/api/todos/:id", TodoController.ControlUpdateTask)
+		e.DELETE("/api/todos/:id", TodoController.ControlDeleteTask)
 		e.Logger.Fatal(e.Start(":8081"))
 	} else if mode == "main" {
 		todoRepository := repository.NewTodoRepository(SetupMongoDB(mode))
 		todoService := service.NewTodoService(todoRepository)
-		todoHandler := handler.NewTodoHandler(todoService)
+		TodoController := controller.NewTodoController(todoService)
 
 		e := echo.New()
 		e.Use(middleware.CORS())
-		e.GET("/api/todos", todoHandler.HandleGetTasks)
-		e.POST("/api/todos", todoHandler.HandleCreateTask)
-		e.PUT("/api/todos/:id", todoHandler.HandleUpdateTask)
-		e.DELETE("/api/todos/:id", todoHandler.HandleDeleteTask)
+		e.GET("/api/todos", TodoController.ControlGetTasks)
+		e.POST("/api/todos", TodoController.ControlCreateTask)
+		e.PUT("/api/todos/:id", TodoController.ControlUpdateTask)
+		e.DELETE("/api/todos/:id", TodoController.ControlDeleteTask)
 
 		e.Logger.Fatal(e.Start(":8080"))
 	}

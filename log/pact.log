@@ -1209,3 +1209,99 @@ D, [2021-10-22T00:03:51.412580 #72428] DEBUG -- : body :
 I, [2021-10-22T00:03:51.422519 #72428]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"4", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Thu, 21 Oct 2021 21:03:51 GMT", "Vary"=>"Origin"}, see debug logs for body
 D, [2021-10-22T00:03:51.422645 #72428] DEBUG -- : body: "1"
 
+I, [2021-10-22T07:48:44.371662 #73474]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given a todo item created create item request with POST /api/todos returns a response which has status code 201'
+I, [2021-10-22T07:48:44.374601 #73474]  INFO -- : Sending POST request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"a todo item created"}]}, see debug logs for body
+D, [2021-10-22T07:48:44.375819 #73474] DEBUG -- : body :{"id":"1","task":"Buy chocolate"}
+I, [2021-10-22T07:48:44.487128 #73474]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"49", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:48:44 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:48:44.487320 #73474] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":false}
+
+I, [2021-10-22T07:48:44.492853 #73474]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given there are 2 todos a request for todos with GET /api/todos returns a response which has status code 200'
+I, [2021-10-22T07:48:44.493107 #73474]  INFO -- : Sending GET request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"there are 2 todos"}]}, see debug logs for body
+D, [2021-10-22T07:48:44.493157 #73474] DEBUG -- : body :
+I, [2021-10-22T07:48:44.502097 #73474]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"51", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:48:44 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:48:44.502209 #73474] DEBUG -- : body: [{"id":"1","task":"Buy chocolate","status":false}]
+
+I, [2021-10-22T07:48:44.503733 #73474]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Update a todo item a request to update a todo item with PUT /api/todos/1 returns a response which has status code 202'
+I, [2021-10-22T07:48:44.504007 #73474]  INFO -- : Sending PUT request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Update a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:48:44.504080 #73474] DEBUG -- : body :
+I, [2021-10-22T07:48:44.527903 #73474]  INFO -- : Received response with status: 202, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"48", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:48:44 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:48:44.528001 #73474] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":true}
+
+I, [2021-10-22T07:48:44.529516 #73474]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Delete a todo item a request to delete a todo item with DELETE /api/todos/1 returns a response which has status code 200'
+I, [2021-10-22T07:48:44.529704 #73474]  INFO -- : Sending DELETE request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Delete a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:48:44.529747 #73474] DEBUG -- : body :
+I, [2021-10-22T07:48:44.538975 #73474]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"4", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:48:44 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:48:44.539387 #73474] DEBUG -- : body: "1"
+
+I, [2021-10-22T07:56:13.203588 #73701]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given a todo item created a request to create item with POST /api/todos returns a response which has status code 201'
+I, [2021-10-22T07:56:13.206197 #73701]  INFO -- : Sending POST request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"a todo item created"}]}, see debug logs for body
+D, [2021-10-22T07:56:13.206277 #73701] DEBUG -- : body :{"id":"1","task":"Buy chocolate"}
+I, [2021-10-22T07:56:13.300369 #73701]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"49", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:56:13 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:56:13.300525 #73701] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":false}
+
+I, [2021-10-22T07:56:13.308341 #73701]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given there are 1 todo a request for todos with GET /api/todos returns a response which has status code 200'
+I, [2021-10-22T07:56:13.308581 #73701]  INFO -- : Sending GET request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"there are 1 todo"}]}, see debug logs for body
+D, [2021-10-22T07:56:13.308628 #73701] DEBUG -- : body :
+I, [2021-10-22T07:56:13.316117 #73701]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"51", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:56:13 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:56:13.316223 #73701] DEBUG -- : body: [{"id":"1","task":"Buy chocolate","status":false}]
+
+I, [2021-10-22T07:56:13.317533 #73701]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Update a todo item a request to update a todo item with PUT /api/todos/1 returns a response which has status code 202'
+I, [2021-10-22T07:56:13.317725 #73701]  INFO -- : Sending PUT request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Update a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:56:13.317786 #73701] DEBUG -- : body :
+I, [2021-10-22T07:56:13.336682 #73701]  INFO -- : Received response with status: 202, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"48", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:56:13 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:56:13.336823 #73701] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":true}
+
+I, [2021-10-22T07:56:13.338977 #73701]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Delete a todo item a request to delete a todo item with DELETE /api/todos/1 returns a response which has status code 200'
+I, [2021-10-22T07:56:13.339248 #73701]  INFO -- : Sending DELETE request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Delete a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:56:13.339334 #73701] DEBUG -- : body :
+I, [2021-10-22T07:56:13.347993 #73701]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"4", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:56:13 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:56:13.348105 #73701] DEBUG -- : body: "1"
+
+I, [2021-10-22T07:57:07.408117 #73775]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given a todo item created a request to create item with POST /api/todos returns a response which has status code 201'
+I, [2021-10-22T07:57:07.410506 #73775]  INFO -- : Sending POST request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"a todo item created"}]}, see debug logs for body
+D, [2021-10-22T07:57:07.410586 #73775] DEBUG -- : body :{"id":"1","task":"Buy chocolate"}
+I, [2021-10-22T07:57:07.513416 #73775]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"49", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:57:07 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:57:07.513637 #73775] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":false}
+
+I, [2021-10-22T07:57:07.519391 #73775]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given there are 1 todo a request for todos with GET /api/todos returns a response which has status code 200'
+I, [2021-10-22T07:57:07.519646 #73775]  INFO -- : Sending GET request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"there are 1 todo"}]}, see debug logs for body
+D, [2021-10-22T07:57:07.519696 #73775] DEBUG -- : body :
+I, [2021-10-22T07:57:07.527306 #73775]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"51", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:57:07 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:57:07.527401 #73775] DEBUG -- : body: [{"id":"1","task":"Buy chocolate","status":false}]
+
+I, [2021-10-22T07:57:07.528823 #73775]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Update a todo item a request to update a todo item with PUT /api/todos/1 returns a response which has status code 202'
+I, [2021-10-22T07:57:07.529057 #73775]  INFO -- : Sending PUT request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Update a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:57:07.529114 #73775] DEBUG -- : body :
+I, [2021-10-22T07:57:07.552882 #73775]  INFO -- : Received response with status: 202, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"48", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:57:07 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:57:07.553021 #73775] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":true}
+
+I, [2021-10-22T07:57:07.554467 #73775]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Delete a todo item a request to delete a todo item with DELETE /api/todos/1 returns a response which has status code 200'
+I, [2021-10-22T07:57:07.554758 #73775]  INFO -- : Sending DELETE request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Delete a todo item"}]}, see debug logs for body
+D, [2021-10-22T07:57:07.554846 #73775] DEBUG -- : body :
+I, [2021-10-22T07:57:07.564770 #73775]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"4", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 04:57:07 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T07:57:07.564884 #73775] DEBUG -- : body: "1"
+
+I, [2021-10-22T08:29:23.620294 #76967]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given a todo item created create item request with POST /api/todos returns a response which has status code 201'
+I, [2021-10-22T08:29:23.622756 #76967]  INFO -- : Sending POST request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"a todo item created"}]}, see debug logs for body
+D, [2021-10-22T08:29:23.622844 #76967] DEBUG -- : body :{"id":"1","task":"Buy chocolate"}
+I, [2021-10-22T08:29:23.752750 #76967]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"49", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 05:29:23 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T08:29:23.752911 #76967] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":false}
+
+I, [2021-10-22T08:29:23.759673 #76967]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given there are 2 todos a request for todos with GET /api/todos returns a response which has status code 200'
+I, [2021-10-22T08:29:23.759985 #76967]  INFO -- : Sending GET request to path: "/api/todos" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"there are 2 todos"}]}, see debug logs for body
+D, [2021-10-22T08:29:23.760074 #76967] DEBUG -- : body :
+I, [2021-10-22T08:29:23.770140 #76967]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"51", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 05:29:23 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T08:29:23.770252 #76967] DEBUG -- : body: [{"id":"1","task":"Buy chocolate","status":false}]
+
+I, [2021-10-22T08:29:23.772230 #76967]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Update a todo item a request to update a todo item with PUT /api/todos/1 returns a response which has status code 202'
+I, [2021-10-22T08:29:23.772451 #76967]  INFO -- : Sending PUT request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "CONTENT_TYPE"=>"application/json; charset=UTF-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept,Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Update a todo item"}]}, see debug logs for body
+D, [2021-10-22T08:29:23.772500 #76967] DEBUG -- : body :
+I, [2021-10-22T08:29:23.805265 #76967]  INFO -- : Received response with status: 202, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"48", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 05:29:23 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T08:29:23.805420 #76967] DEBUG -- : body: {"id":"1","task":"Buy chocolate","status":true}
+
+I, [2021-10-22T08:29:23.807712 #76967]  INFO -- : Running example 'Verifying a pact between Todo Client and Todo Api Given Delete a todo item a request to delete a todo item with DELETE /api/todos/1 returns a response which has status code 200'
+I, [2021-10-22T08:29:23.807994 #76967]  INFO -- : Sending DELETE request to path: "/api/todos/1" with headers: {"HTTP_ACCEPT"=>"application/json; charset=utf-8", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Accept", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Delete a todo item"}]}, see debug logs for body
+D, [2021-10-22T08:29:23.808113 #76967] DEBUG -- : body :
+I, [2021-10-22T08:29:23.823043 #76967]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"4", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Fri, 22 Oct 2021 05:29:23 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-10-22T08:29:23.823207 #76967] DEBUG -- : body: "1"
+
